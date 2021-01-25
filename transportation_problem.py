@@ -3,13 +3,14 @@ from gekko import GEKKO
 
 m = GEKKO()
 m.options.SOLVER = 1
-q = m.Array(m.Var, (4, 4), lb=0, integer=True)
 
-costs =   # Edit here. Exemple: [[65, 83, 86, 74], [89, 90, 46, 90], [43, 51, 71, 76], [95, 43, 73, 69]]
-supply =  # Edit Here. Exemple: [243, 379, 490, 122]
-demand =   # Edit here. Exemple: [239, 416, 112, 248]
+costs =  # Edit here. Exemple: [[65, 83, 86, 74], [89, 90, 46, 90], [43, 51, 71, 76], [95, 43, 73, 69]]
+supply =  # Edit here. Exemple: [243, 379, 490, 122]
+demand =  # Edit here. Exemple: [239, 416, 112, 248]
 n = len(supply)
 p = len(demand)
+
+q = m.Array(m.Var, (n, p), lb=0, integer=True)
 
 for i in range(n):
 	m.Equation(np.sum(q[i]) <= supply[i])
