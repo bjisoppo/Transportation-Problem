@@ -16,7 +16,7 @@ for i in range(n):
 	m.Equation(np.sum(q[i]) <= supply[i])
 
 for j in range(p):
-	m.Equation(np.sum(np.sum(q, axis=0)[j]) >= demand[j])
+	m.Equation((np.sum(q, axis=0)[j]) >= demand[j])
 
 
 def cost(q, costs, cost=0):
