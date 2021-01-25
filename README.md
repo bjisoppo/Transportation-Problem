@@ -11,6 +11,7 @@ The demand array is the total demand for each destination.
 
 =========
 
+# Transshipment-Problem
 Script to minimize costs in transshipment problem:
 
 In this script you should edit the supply and demand arrays and costs matrix.
