@@ -9,8 +9,6 @@ The supply array is the total supply for each source.
 
 The demand array is the total demand for each destination.
 
-=========
-
 # Transshipment-Problem
 Script to minimize costs in transshipment problem:
 
